@@ -1,0 +1,32 @@
+<html>
+<body>
+<label>Введите длину основания<br>
+<input id="input_b" value="0" placeholder="100" type="text"> </label>
+<br><br>
+<label>Введите длину основания<br>
+<input id="input_a" value="0" placeholder="20" type="text">
+</label>
+<br><br>
+<label>Введите высоту<br>
+<input id="input_h" value="0" placeholder="20" type="text">
+</label>
+<br><br>
+<label>Нажми на кнопку<br>
+<input value="Вычислить" type="button" onmouseover=
+"event.preventDefault(); SilaToka()">
+</label><br><br>
+<div id="answer">
+Ответ
+</div>
+<script>
+function SilaToka() {
+
+let B = document.getElementById("input_b").value;
+let A = document.getElementById("input_a").value;
+let H = document.getElementById("input_h").value;
+let S = ( ( A - - B ) / 2 ) * H;
+document.getElementById("answer").innerHTML = S.toFixed(3);
+
+}
+</script>
+</html>
