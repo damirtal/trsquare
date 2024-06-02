@@ -1,0 +1,22 @@
+from abc import ABC, abstractmethod
+
+# Абстрактная фабрика для создания различных типов автомобилей
+class CarFactory(ABC):
+    @abstractmethod
+    def produce_car(self):
+        pass
+
+# Конкретная реализация абстрактной фабрики для дизельного автомобиля
+class DieselCarFactory(CarFactory):
+    def produce_car(self):
+        return DieselCar()
+
+# Конкретный класс для дизельного автомобиля
+class DieselCar(Car):
+    def drive(self):
+        print("Driving a diesel car.")
+
+# Использование абстрактной фабрики для создания экземпляра дизельного автомобиля
+diesel_factory = DieselCarFactory()
+diesel_car = diesel_factory.produce_car()
+diesel_car.drive()
